@@ -3,5 +3,14 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 echo "Holberton School" > /var/www/html/index.html
-rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
+"server {    
+    listen 80;   
+    listen [::]:80;default_server;    
+    root /var/www/html/index.html;   
+    server_name_;
+    location /redirect_me {
+      return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
+    }
+}
+" | sudo tee /etc/nginx/enabled/default
 sudo service nginx restart

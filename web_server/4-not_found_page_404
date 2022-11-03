@@ -21,3 +21,8 @@ printf %s "server {
 " | sudo tee /etc/nginx/sites-available/default
 
 sudo service nginx restart
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Priva

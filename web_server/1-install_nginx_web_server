@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 #Installing nginx
-
 sudo apt-get update
-apt-get -y install
+apt-get -y install inginx
 sudo touch /var/www/html/index.html
 echo "Holberton School" | sudo tee /var/www/html/index.html
 sudo service nginx restart

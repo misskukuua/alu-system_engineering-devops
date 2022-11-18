@@ -2,7 +2,7 @@
 #nginx must run as super user
 #nginx must be listening on port 8080
 pkill "apache2"
-chown -R nginx:nginx /etc/nginx/conf.d
-chmod -R 755 /etc/nginx/conf.d
-echo  "listen 80 default_server" | sed 's_80_8080_'
-sudo -u nginx service nginx restart
+chown nginx:nginx /etc/nginx/nginx/conf
+chmod 755 /etc/nginx/nginx/conf
+sed -i 's/listen 80 default_server/listen 8080 default_server;/g' /etc/nginx/sites-enable/default
+sudo -u nginx service nginx start

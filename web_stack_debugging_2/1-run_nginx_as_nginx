@@ -3,5 +3,6 @@
 #nginx must be listening on port 8080
 pkill "apache2"
 chown -R nginx:nginx /etc/nginx/conf.d
-chmod -R 755 /etc/nginx/nginx.conf.d
+chmod -R 755 /etc/nginx/conf.d
+echo  "listen 80 default_server" | sed 's_80_8080_'
 sudo -u nginx service nginx restart

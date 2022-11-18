@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#nginx must run as super user
+#nginx must be listening on port 8080

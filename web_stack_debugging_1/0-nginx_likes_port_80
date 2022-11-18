@@ -2,4 +2,4 @@
 #connect nginx to port 80
 sed -i "s/listen\s.[0-9]+\sdefault_server;/listen [::]:80 default_server;/" /etc/nginx/sites-available/default
 sed -i "s/listen\s.[0-9]+\sdefault_server;/listen [::]:80 default_server;/" /etc/nginx/sites-enabled/default
-service nginx start
+service nginx restart

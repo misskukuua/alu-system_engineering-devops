@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 #nginx must run as super user
 #nginx must be listening on port 8080
+pkill "apache2"
+chown -R nginx:nginx /etc/nginx/conf.d
+chmod -R 755 /etc/nginx/nginx.conf.d
+sudo -u nginx service nginx restart

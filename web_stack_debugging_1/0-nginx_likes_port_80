@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-#connect nginx to port 80
-sed -ir "/listen 80 default_server" /etc/nginx/sites-available/default
-sed -ir "listen\s\[::\]:.[0-9]\sdefault_server" /etc/nginx/sites-enabled/default
+#connect nginx to port 80`
+sed -i  "s/listen 8080 default_server;/listen [::]:80 default_server;/" /etc/nginx/sites-available/default
+sed -i "s/listen 8080 default_server;/listen [::]:80 default_server;/" /etc/nginx/sites-enabled/default
 service nginx start
-

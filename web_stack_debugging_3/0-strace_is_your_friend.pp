@@ -1,3 +1,5 @@
 #fix apache 500 error using puppet code
-strace -p 42
-
+exec { 'chnage of word":
+    command  => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
+    provider => shell,
+}

@@ -1,7 +1,7 @@
 #testing how well our web server setup featuring Nginx is doing under pressure
 #HTTP requests to a web server
 exec { 'more nginx server':
-    command  => 'sed -i "s/ULIMIT="-n 15"/ULIMIT="-n 4096"/" /etc/default/nginx',
+    command  => 'sed -i "s/ULIMIT=\"-n 15"/ULIMIT=\"-n 2048"/" /etc/default/nginx',
     provider => shell,
     before   => Exec['restart nginx']
 }

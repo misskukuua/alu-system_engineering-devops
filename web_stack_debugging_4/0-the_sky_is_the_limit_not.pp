@@ -3,6 +3,7 @@
 exec { 'more nginx server':
     command  => 'sed -i "s/ULIMIT="-n 15"/ULIMIT="-n 2048"/" /etc/default/nginx',
     provider => shell,
+    before   => Exec['restart nginx']
 }
 
 exec { 'restart nginx':

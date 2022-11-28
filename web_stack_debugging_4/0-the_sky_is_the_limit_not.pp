@@ -6,6 +6,6 @@ exec { 'more nginx server':
 }
 
 exec { 'restart nginx':
-    command => 'service nginx restartr''
+    command => 'sudo service nginx restart''
     provider => shell,
 }
